@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+   <title>Document</title>
+   <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+	<header  class="header">
+		<h1>Il mio Sito</h1>
+ 	</header>
+   
+	<nav>
+		<ul>
+			<li><a href="index.html">Home</a></li>
+			<li><a href="pagina-2.html">Chi siamo</a></li>
+			<li><a class="active">Contatti</a></li>
+		</ul>
+	</nav>
+	<hr style="margin-top: 12px; border: 2px solid red; margin-bottom: 36px;">
+
+    <main>
+		<h2>Contatti</h2>
+		<div class="contatti">
+			<form method="post" action="https://www.andoria.it/risultato.php">
+				<table class="table">
+					<tr><td><label>Nome </td><td><input name="nome" required></label></td></tr>
+					<tr><td><label>Cognome </td><td><input name="cognome" required></label></td></tr>
+					<tr><td><label>Indirizzo </td><td><input name="Indirizzo" required></label></td></tr>
+					<tr><td><label>Telefono </td><td><input type="tel" name="telefono" required style="width: 200px;"></label></td></tr>
+					<tr><td><label>Email </td><td><input type="email" name="email" required style="width: 600px;"></label></td></tr>
+				</table>
+				<button class="bottone-informazioni">Richiedi informazioni</button>
+			</form>
+		</div>
+	</main>
+	<footer class="footer">
+		<div class="footer--copy">
+			FOOTER
+		</div>
+   	</footer>
+</body>
+</html>
