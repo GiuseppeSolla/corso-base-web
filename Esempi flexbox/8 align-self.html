@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<style>
+.container {
+  display: flex;
+  flex-direction: row;
+  background-color: #cccccc;
+  height:400px;
+}
+.child {
+  margin:15px;
+  padding:50px;
+  background-color:#ff0000;
+  text-align: center;
+  font-size:25px;
+}
+#box1 {align-self: flex-start;}
+#box2 {align-self: flex-end;}
+#box3 {align-self: center;}
+#box4 {align-self: baseline;}
+#box5 {align-self: stretch;}
+</style>
+</head>
+<body>
+    <div class="container">
+        <div class="child" id="box1">1</div>
+        <div class="child" id="box2">2</div>
+        <div class="child" id="box3">3</div>
+        <div class="child" id="box4">4</div>
+        <div class="child" id="box5">5</div>
+    </div>
+</body>
+</html>

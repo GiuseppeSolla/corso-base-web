@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="it">
+   <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <title>Esempio flexbox</title>
+        <style>
+        body { background-color:#ffffff; color:#000000; }
+        .container { 
+			width:100%; 
+			max-width: 960px; 
+			background-color:#cccccc; 
+			font-size: 32px; 
+			display: flex; 
+			flex-direction: row; 
+		}
+        .child { width:320px;  text-align:center; padding:20px; }
+        
+		#box1{background-color:red; flex-shrink:1;}
+        #box2{background-color:blue; flex-shrink:2;}
+        #box3{background-color:green; flex-shrink:3;}
+        </style>
+   </head>
+   <body>
+        <div class="container">
+           <div class="child" id="box1">Box 1</div>
+           <div class="child" id="box2">Box 2</div>
+           <div class="child" id="box3">Box 3</div>
+        </div>
+        </div>
+   </body>
+</html>

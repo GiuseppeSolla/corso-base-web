@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *,
+        *:before,
+        *:after {
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            font-family: Montserrat, Arial;
+        }
+        
+        .container{
+            background-color: #ccc;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 6px;
+            justify-content:left;
+        }
+        .item{
+            background-color: tomato;
+            border: 6px solid #ccc;
+            font-size: 40px;
+            text-align: center;
+            flex-basis: 20%;
+            padding: 20px;
+        }
+
+        @media (max-width: 768px){
+            .item{
+                flex-basis: 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">11</div>
+        <div class="item">12</div>
+    </div>
+
+</body>
+</html>
