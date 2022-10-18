@@ -1,0 +1,127 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #ebebeb;
+    font-family: 'Montserrat', Arial;
+}
+
+p{color: #333; font-size: 16px;}
+a{color:#15c2a2; text-decoration: none;}
+
+.img-res{
+    width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3{
+    color: rgb(153, 16, 142);
+}
+
+.container{
+    padding: 24px;
+    /* impostiamo una dimensione max fissa ed un margine sx/dx automatico */
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+header{
+    background: #fff;
+    padding: 20px;
+    width: 100%;
+}
+
+.logo{
+    text-align: center;
+    width: 100%;
+    display: block;
+    font-size: 48px;
+    margin-bottom: 24px;
+    font-weight: 700;
+}
+
+.riga{
+    border: 2px solid green;
+    margin-bottom: 24px;
+}
+
+#menu-principale{text-align: center;font-size: 20px;margin-bottom: 18px;}
+#menu-principale li{ display: inline; }
+#menu-principale li a{margin: 6px; transition: .5s; padding: 6px 18px;}
+
+#menu-principale li a:hover{
+        background-color: green;
+        color: #fff;
+}
+#menu-principale li a.active{
+    background-color: red;
+    color: #fff;
+}
+
+.cover{
+    margin-bottom: 12px;
+    position: relative;
+    border-bottom: 4px solid red;
+}
+.cover__content{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 100px 20px 20px 20px;
+    /*  Utilizzare il sito https://cssgradient.io/ per ricavare un gradiente verticale in modo che 
+      risaltano le scritte in bianco
+    */
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+.cover__content p,
+.cover__content h1{
+    color: #fff;
+}
+
+
+
+.grid{
+    display:flex;
+    flex-wrap: wrap;
+}
+.col-33{
+    width: 33%;
+    padding: 16px;
+}
+
+.footer{
+    background: #333;
+    padding: 20px;
+    text-align: center;
+}
+.footer p{
+    color: #fff;
+}
+
+.whatsapp-link{
+    width: 36px;
+    height: 36px;
+    display: inline-block;
+    position: fixed;
+    bottom: 12px;
+    right: 12px;
+    display: none;
+}
+
+@media (max-width: 768px){
+    .col-33{
+        width: 100%;
+    }
+    .whatsapp-link{
+        display: block;
+    }
+}
