@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--link rel="stylesheet" href="form.css"-->
+    <style>
+        body{
+            font-family: Montserrat, Arial;
+            font-size: 1em;
+        }
+        .bordo-rosso{
+            border: 1px solid red;
+            padding: 12px;
+            background-color: #f2f2f2;
+            width: 800px;
+        }
+        .btn{
+            border: 1px solid navy;
+            background-color: #313489;
+            color: white;
+            padding: 6px 12px;
+            font-size: 1.2em;
+        }
+        .btn:hover{
+            background-color: red;
+            border: 1px solid darkred;
+        }
+        textarea{
+            width: 50%;
+            height: 100px;
+            margin-left: 12px;
+        }
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet"> 
+</head>
+<body>
+    
+    <section class="bordo-rosso">
+        <form method="post" action="https://www.andoria.it/risultato.php">
+            <p>
+                <label>Nome: <input name="nome" required></label>
+                <label>Cognome: <input name="cognome" required></label>
+            </p>
+            <p>
+                <label>Indirizzo: <input name="indirizzo" required style="width: 500px;"></label>
+            </p>
+            <p>
+                <label>Comune: <input name="comune" required></label>
+            </p>
+            <p><label>Telefono: <input type=tel name="telefono" required></label></p>
+            <p><label>Email: <input type=email name="email" required></label></p>
+            <fieldset>
+                <legend> Grandezza della pizza </legend>
+                <p><label> <input type=radio name=size value="Piccola"> Piccola </label></p>
+                <p><label> <input type=radio name=size value="Media"> Media </label></p>
+                <p><label> <input type=radio name=size value="Grande"> Grande </label></p>
+            </fieldset>
+            <fieldset>
+                <legend> Condimento </legend>
+                <p><label> <input type=checkbox name="condimento1" value="Bacon"> Bacon </label></p>
+                <p><label> <input type=checkbox name="condimento2" value="Formaggio"> Extra formaggio </label></p>
+                <p><label> <input type=checkbox name="condimento3" value="Cipolla"> Cipolla </label></p>
+                <p><label> <input type=checkbox name="condimento4" value="Funghi"> Funghi </label></p>
+            </fieldset>
+            <p>
+                <label>Ora di consegna richiesta con intervalli di 15 minuti
+                <input type=time min="11:00" max="21:00" step="900" name="consegna"></label>
+            </p>
+            <p>
+                <label>Istruzioni per la consegna<textarea name="istruzioni"></textarea></label>
+            </p>
+            <p>
+                <button class="btn">Invia l'ordine</button>
+            </p>
+        </form>
+    </section>  
+    
+       
+</body>
+</html>

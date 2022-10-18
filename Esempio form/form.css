@@ -1,0 +1,21 @@
+.bordo-rosso{
+    border: 1px solid red;
+    padding: 12px;
+    background-color: #f2f2f2;
+}
+.btn{
+    border: 1px solid navy;
+    background-color: #313489;
+    color: white;
+    padding: 6px 12px;
+    font-size: 1.2em;
+}
+.btn:hover{
+    background-color: red;
+    border: 1px solid darkred;
+}
+textarea{
+    width: 50%;
+    height: 100px;
+    margin-left: 12px;
+}
