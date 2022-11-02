@@ -1,0 +1,309 @@
+@import url('http://fonts.cdnfonts.com/css/montserrat');
+
+html,
+body{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body{
+    background: #eee;
+    font-style: 'Montserrat', Arial;
+}
+
+.animate{
+            transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+}
+
+.button{
+    display: inline-block;
+    background-color: #fff;
+    color: #000;
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 20px;
+    font-size: 18px;
+    margin-top: 36px;
+}
+.button:hover{background-color: yellow;}
+
+/*---- Header ---------------------------------------------------------------------------*/ 
+.header{background-color: #0082e6;}
+.header__logo{
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    float: left;
+}
+.header__logo:hover{color: #fff;}
+.header__logo span{color: yellow; font-weight: bold;}
+.header__menu{float: right;margin: 0;padding: 0;margin-right: 12px;}
+.header__menu__item{display: inline-block;}
+.header__menu__item a{color: #fff; display: block; padding: 22px; text-decoration: none;transition: .3s;}
+.header__menu__item a:hover{background-color: #104f80;}
+.header__menu__item--visited{background-color: #104f80;}
+
+.header__icon-bar{float: right; padding: 10px; display: none;height: 50px;width: 50px;}
+.header__icon-bar span{height: 2px; width: 30px;background: #fff;position: relative;display: block;margin-top: 12px;transition: all 0.2s cubic-bezier(.215, .61, .355, 1);}
+.header__icon-bar-x1 {transform: rotate(45deg) translateY(9px);}
+.header__icon-bar-x2 {transform: rotate(-45deg) translateY(-9px);}
+
+
+.header__menu__login{display: inline-block;}
+.header__menu__login a{
+    color: #fff;
+    background-color: rgb(223, 19, 210);
+    display: block;
+    padding: 10px 18px;
+    text-decoration: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    transition: .3s;
+}
+.header__menu__login a:hover{background-color: #ae14f0;}
+
+
+/*---- Cover -----------------------------------------------------------------------------------*/
+.cover{
+    height: 60%;
+    background-image: url("https://source.unsplash.com/category/nature/");
+	background-size: cover;
+	-o-background-size: cover;
+	-moz-background-size: cover;
+	background-position: center center;
+	position:relative; 
+}
+.cover__caption{
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    padding: 0 20px;
+}
+.cover__caption__copy{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #fff;
+}
+.cover__caption__copy h1{font-size: 50px; margin-bottom: 30px;}
+
+.cover__filter{
+    background: #333;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 0; 
+    opacity: 0.6;
+}
+
+.cover--single{ height: 40%; }
+.cover--single h1{font-size: 54px;}
+
+.cover--contatti{height: 30%;}
+
+/*---- Cards -----------------------------------------------------------------------------------*/
+.cards{max-width: 1200px;margin: 40px auto;}
+.card{
+    width: 30%;
+    margin: 0px 1.5%;
+    background: #fff;
+    float: left;
+    border: 1px solid #ccc;
+    box-shadow: 1px 1px 5px 1px #ccc;
+    transition: .3s;
+}
+.card:hover{transform: scale(1.04);}
+.card__image{width: 100%;height: auto;}
+.card__copy{padding: 5px 20px;}
+.card__copy h3{margin-bottom: 0;}
+
+
+/*---- Banner ----------------------------------------------------------------------------------*/
+.banner{background: #fff; height: 40%; margin-top: 40px;}
+.banner__images{
+    width: 50%;
+    float: left;
+    height: 100%;
+    background-image: url("https://source.unsplash.com/category/nature/400x400");
+    background-size: cover;
+    -o-background-size: cover;
+	-moz-background-size: cover;
+	background-position: center center;
+}
+.banner__copy{
+    width: 50%;
+    float: left;
+    height: 100%;
+    display: table;
+}
+.banner__copy__text{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 30px;
+    border-top: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+}
+.banner__copy__text h3{font-size: 36px; margin-bottom: 0;}
+.banner__copy__text h4{font-size: 22px; margin: 6px 0px 18px 0px;}
+.banner__copy__text > p{font-size: 1.1em;}
+
+
+/*---- Footer ----------------------------------------------------------------------------------*/
+.footer{
+    background: #0082e6;
+    color: #fff;
+    font-size: 1.1em;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    padding: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+.footer_left{text-align: left;}
+.footer_right{text-align: right;}
+
+
+/*---- Articolo Panel ----------------------------------------------------------------------------------*/
+.panel{font-family: 'Montserrat', Arial;}
+.panel__copy{
+    max-width: 800px;
+    margin: 0px auto;
+    background: #fff;
+    padding: 20px 40px;
+    position: relative;
+    margin-top: -60px;
+}
+.panel__copy__meta{
+    font-size: .75em;
+    background-color: #0082e6;
+    color: #fff;
+    padding: 2px 6px;
+    margin-right: 12px;
+}
+.panel__copy__title{ font-size: 2em;}
+
+.panel__copy--standard{
+    max-width: 60%;
+}
+
+.panel__copy--contatti{
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+/*---- Contatti --------------------------------------------------------------------------------*/
+.contatti{
+    padding: 48px 12px 24px;
+}
+
+.bottone-informazioni{
+    font-size: 1.1em;
+    background-color: #00477d;
+    padding: 6px 36px;
+    color: #fff;
+    margin-top: 18px;
+	transition: .3s;
+}
+.bottone-informazioni:hover{
+    background-color: #387bae;
+    color: #fff;
+}
+input {
+    font-size: 16px;
+    padding: 6px;
+    width: 500px;
+}
+input:hover{
+    background-color: lightcyan;
+}
+
+.table td{
+    padding-bottom: 12px;
+    padding-right: 6px;
+}
+
+
+
+
+
+
+/*---- Tablet ---------------------------------------------------------------------------------*/
+@media (max-width: 998){
+    
+}
+
+
+/*---- Smartphone ------------------------------------------------------------------------------*/
+@media (max-width: 768px){
+    
+    /* Header */
+    .header__icon-bar{display: block;}
+    .header__menu{width: 100%; margin-right: 0px; overflow: hidden;height: 0px;}
+    .header__menu__item{display: block;}
+    .is-open{height: 316px; overflow: auto;border-bottom: 4px solid #104f80;}
+
+    /* Cover */
+    .cover{height: 100%;}
+
+    /* Cover Single */
+    .cover--single {height: 40%;}
+
+    /* Cover Contatti */
+    .cover--contatti {height: 30%;}
+    input{
+        width: 300px;
+    }
+
+    /* Cards */
+    .card{width: 90%; margin: 5%;}
+    .card:hover{transform: none;}
+
+    /* Banner */
+    .banner__image,
+    .banner__copy{width: 50%; height: 100%;}
+    .banner__copy__text > p{display: none;}
+    .banner__copy__text{padding: 6px 30px;}
+
+    /* Panel */
+    .panel__copy{
+        max-width: 90%;
+    }
+    .panel__copy--contatti{
+        max-width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+/*---- clearfix --------------------------------------------------------------------------------*/
+.clearfix:after {
+	visibility: hidden;
+	display: block;
+	font-size: 0;
+	content: " ";
+	clear: both;
+	height: 0;
+	}
+* html .clearfix             { zoom: 1; } /* IE6 */
+*:first-child+html .clearfix { zoom: 1; } /* IE7 */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

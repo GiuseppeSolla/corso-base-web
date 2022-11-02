@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito modulare - Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://use.fontawesome.com/c6768ea133.js"></script>
+
+</head>
+<body>
+
+    <!---- Header ---------->
+    <header class="header clearfix">
+		<a href="index.html" class="header__logo">Logo<span>Website</span></a>
+		<nav>
+			<a href="" class="header__icon-bar">
+    	        <!--i class="fa fa-bars fa-mode" style="font-size: 20px; color: #fff;"></i-->
+				<span></span>
+				<span></span>
+			</a>
+			<ul class="header__menu animate">
+				<li class="header__menu__item"><a href="index.html">Home</a></li>
+				<li class="header__menu__item  header__menu__item--visited"><a href="single.html">Articolo</a></li>
+				<li class="header__menu__item"><a href="page.html">Page</a></li>
+				<li class="header__menu__item"><a href="contatti.html">Contatti</a></li>
+				<li class="header__menu__login" id="menu-login"><a id="btnLogin" href="">Login</a></li>
+			</ul>
+		</nav>
+	</header>
+
+    <!-- Cover per pagina Single -->
+    <section class="cover cover--single">
+        <div class="cover__filter"></div>
+        <div class="cover__caption">
+            <div class="cover__caption__copy">
+                <h1>Titolo del mio articolo</h1>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pannello contenente l'articolo -->
+    <article class="panel">
+        <div class="panel__copy">
+            <h2 class="panel__copy__title">Sottotitolo del mio articolo</h2>
+            Data: <span class="panel__copy__meta">02-11-2022</span>
+            Categoria: <span class="panel__copy__meta">News</span>
+            Autore: <span class="panel__copy__meta">La redazione</span>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis dignissimos debitis excepturi, illo maxime beatae atque id doloribus amet dolor pariatur culpa, fuga veniam a consequuntur et ipsa necessitatibus quidem.</p>
+        </div>
+    </article>
+
+    <!---- Cards ----------->
+    <section class="cards clearfix">
+        <div class="card">
+            <img class="card__image" src="https://source.unsplash.com/category/nature/400x260" alt="Nature">
+            <div class="card__copy">
+                <h3>Titolo della card</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quasi rerum ab ipsum ipsam eius molestupti?</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card__image" src="https://source.unsplash.com/category/food/400x260" alt="Food">
+            <div class="card__copy">
+                <h3>Titolo della card</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quasi rerum ab ipsum ipsam eius molestupti?</p>
+            </div>
+        </div>
+        <div class="card">
+            <img class="card__image" src="https://source.unsplash.com/category/people/400x260" alt="People">
+            <div class="card__copy">
+                <h3>Titolo della card</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aspernatur quasi rerum ab ipsum ipsam eius molestupti?</p>
+            </div>
+        </div>
+    </section>
+
+    <!---- Footer ---------->
+    <footer class="footer">
+        <div class="footer__left">TESTO SINISTRA</div>
+        <div class="footer_right">TESTO DESTRA</div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+            
+			// click icon-bar
+			$(".header__icon-bar").click(function(e){
+                // aggiunge o toglie la classe is-open
+				$(".header__menu").toggleClass('is-open');
+
+				// determina la creazione della x
+				$(".header__icon-bar > span:nth-child(1)").toggleClass('header__icon-bar-x1');
+				$(".header__icon-bar > span:nth-child(2)").toggleClass('header__icon-bar-x2');
+
+                // mostra il selettore del menu
+				if ($(".header__menu").hasClass("is-open")) {
+					//$(".fa-mode").removeClass("fa-bars");
+					//$(".fa-mode").addClass("fa-times");
+					$("#menu-login").removeClass("header__menu__login").addClass("header__menu__item");
+				} else {
+					//$(".fa-mode").removeClass("fa-times");
+					//$(".fa-mode").addClass("fa-bars");
+					$("#menu-login").removeClass("header__menu__item").addClass("header__menu__login");
+				}
+
+                // Il metodo preventDefault() annulla l'evento se è annullabile, il che significa che l'azione predefinita 
+				// che appartiene all'evento non si verificherà.
+				e.preventDefault();
+            });
+			
+			// click bottone
+			$("#btnLogin").click(function(e){
+					alert("cliccato");
+					e.preventDefault();
+			});
+
+         });
+
+    </script>
+
+
+
+
+
+
+</body>
+</html>

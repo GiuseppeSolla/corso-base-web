@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sito modulare - Home</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/4.2.0/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://use.fontawesome.com/c6768ea133.js"></script>
+
+    <style>
+        .slide{width:90%; margin: 24px auto; height:50%; max-height: 400px; position: relative;}
+        .slide__bottoni{display: flex;height: 100%; align-items: center;}
+        .slide__bottoni--sinistra{flex-basis: 80px; text-align: center;}
+        .slide__bottoni--destra{flex-basis: 80px; text-align: center;}
+        
+        .slide__contenuto{
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+	        -o-background-size: cover;
+	        -moz-background-size: cover;
+	        background-position: center center;
+            position: relative;
+            border: 10px solid #fff;
+            box-shadow: 0 5px 20px rgba(0,0,0,.05);
+        }
+        .box-ovali{color: #333;font-size: 2em;}
+        .box-ovali:hover{color: red;}
+        .slide__contenuto__titolo{width: 100%; position: absolute; bottom: 0;}
+        .slide__contenuto__titolo h2{
+            font-weight: 400;
+            padding: 6px 12px;
+            color: #fff;
+            font-size: 18px;
+            background-color: rgb(181, 0, 0);
+            margin: 0px 60% 24px 24px;
+            opacity: .9;
+        }
+        .slide__contenuto__contatore p{
+            text-align: right;
+            color: #fff;
+            padding: 0px 12px;
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- Slide ---------------------------------------------------------------------->
+    <section class="slide">
+        <div class="slide__bottoni">
+            <div class="slide__bottoni--sinistra">
+                <i class="fa fa-chevron-left box-ovali"></i>
+            </div>
+            <div class="slide__contenuto">
+                <div class="slide__contenuto__titolo">
+                    <h2></h2>
+                </div>
+                <div class="slide__contenuto__contatore">
+                    <p></p>
+                </div>
+            </div>
+            <div class="slide__bottoni--destra">
+                <i class="fa fa-chevron-right box-ovali"></i>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script>
+         $(document).ready(function(){
+            
+            let IntervalId = 0;
+            let slide = 1;
+            let titoli = ["Uno", "due", "tre", "", "cinque"];
+            let photo = ["photo-1.jpg", "photo-2.jpg", "photo-3.jpg", "photo-4.jpg", "photo-5.jpg"];
+
+            $(".slide__bottoni--sinistra").click(function(){
+                clearInterval(IntervalId);
+                slide = slide-1;
+                if (slide == 0){slide = 1;}
+                $(".slide__contenuto").hide();
+                $(".slide__contenuto").css("background-image", "url(images/"+photo[slide-1]).fadeIn(800);
+                $(".slide__contenuto__contatore p").html(slide+" / "+titoli.length);
+                if (titoli[slide-1] == ""){
+                    $(".slide__contenuto__titolo").hide();
+                } else {
+                    $(".slide__contenuto__titolo").show();
+                    $(".slide__contenuto__titolo h2").html(titoli[slide-1]);
+                }
+                IntervalId = setInterval(function() { $(".slide__bottoni--destra").click(); }, 5000);
+            });
+            $(".slide__bottoni--destra").click(function(){
+                clearInterval(IntervalId);
+                slide = slide+1;
+                if (slide > titoli.length){slide = 1;}
+                $(".slide__contenuto").hide();
+                $(".slide__contenuto").css("background-image", "url(images/"+photo[slide-1]).fadeIn(800);
+                $(".slide__contenuto__contatore p").html(slide+" / "+titoli.length);
+                if (titoli[slide-1] == ""){
+                    $(".slide__contenuto__titolo").hide();
+                } else {
+                    $(".slide__contenuto__titolo").show();
+                    $(".slide__contenuto__titolo h2").html(titoli[slide-1]);
+                }
+                IntervalId = setInterval(function() { $(".slide__bottoni--destra").click(); }, 5000);
+            });
+            //
+            $(".slide__contenuto").css("background-image", "url(images/"+photo[slide-1]).fadeIn(800);
+            $(".slide__contenuto__titolo h2").html(titoli[0]);
+            $(".slide__contenuto__contatore p").html("1 / "+titoli.length);
+
+            //
+            IntervalId = setInterval(function() { $(".slide__bottoni--destra").click(); }, 5000);
+            $(".slide__contenuto").mouseover(function(){
+                clearInterval(IntervalId);
+                document.body.style.cursor = "wait";
+            });
+            $(".slide__contenuto").mouseout(function(){
+                IntervalId = setInterval(function() {
+                    $(".slide__bottoni--destra").click();
+                }, 5000);
+                document.body.style.cursor = "default";
+            });
+        });
+
+    </script>
+    
+</body>
+</html>
